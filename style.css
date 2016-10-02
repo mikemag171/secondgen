@@ -1,0 +1,1473 @@
+/*
+Theme Name: secondgen
+Theme URI: http://underscores.me/
+Author: Mike Magnussen
+Author URI: http://underscores.me/
+Description: A slightly classier option.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: secondgen
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+secondgen is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #000;
+	font-family: 'Cormorant', sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+site-content {
+    font-size: 1.125em;  
+    line-height: 1.6em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Fira Sans', sans-serif;
+    clear: both;
+    line-height: 1.3em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.4em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 2em;   }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1.4em; }
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: royalblue;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+    margin-bottom: .6em;
+    opacity: .9;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation ul ul {
+	display: none;
+	margin-left: 0.8em;
+}
+
+.main-navigation a {
+	position: relative;
+	display: block;
+	padding: 0.8em 1em;
+	font-weight: 400;
+	text-decoration: none;
+	line-height: 2em;
+	color: white;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	background: #fff;
+	color: #000;
+}
+
+.main-navigation a,
+.main-navigation ul ul li:lastchild a {
+	border-bottom: 1px solid white;
+}
+
+.main-navigation ul li:last-child a {
+	border-bottom: none;
+}
+
+.main-navigation ul .toggled-on {
+	display: block;
+}
+
+.main-navigation li {
+	border-top: 1px solid #eaeaea;
+	border-top: 1px solid rgba(51, 51, 51, 0.1);
+	position: relative;
+}
+
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a {
+	font-weight: 700;
+}
+
+.main-navigation .nav-menu > ul > li:first-child,
+.main-navigation .nav-menu > li:first-child {
+	border-top: 0;
+}
+
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a{
+	padding-right: 48px;
+}
+
+.no-js .main-navigation ul ul {
+	display: block;
+}
+
+.dropdown-toggle {
+	background-color: transparent;
+	border: 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	content: "";
+	height: 42px;
+	padding: 0;
+	position: absolute;
+	text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
+	top: 3px;
+	right: 0;
+	width: 42px;
+}
+
+.dropdown-toggle:after {
+	color: #333;
+	content: "\f431";
+	font-size: 24px;
+	line-height: 42px;
+	position: relative;
+	top: 0;
+	left: 1px;
+	width: 42px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: #eaeaea;
+	background-color: rgba(51, 51, 51, 0.1);
+}
+
+.dropdown-toggle:focus {
+	outline: 1px solid #c1c1c1;
+	outline: 1px solid rgba(51, 51, 51, 0.3);
+}
+
+.dropdown-toggle.toggle-on:after {
+	content: "\f432";
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block; 
+}
+
+.menu-toggle { /* This code styles the mobile menu button and locates it in a fixed position at the bottom left side of the screen. */
+    position: fixed;
+    z-index: 100;
+    bottom: 1em;
+    left: 1em;
+    font-size: 1em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #ca6;
+    border: solid 2px #ca6;
+    transition: all ease-out 400ms; /* This will fade out out over 400 ms the menu botton during a down-scroll. */
+    z-index: 200;
+    height: 2em;
+    width: 3.5em;
+    padding: 0em 0em;
+}
+
+.menu-toggle.hide {
+    bottom: -2.5em; /* Negative ems, in this case, will slide the button down below the view in the viewport, thus HIDING the menu button. */
+}
+
+/* This following style will make sure the mobile menu button doesn't hide while the menu is toggled open. This will override the .menu-toggle.hide which hides the menu button when scrolling down. */
+.toggled .menu-toggled.hide {
+    bottom: 1em;
+}
+
+@media screen and (min-width: 423px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+/* Hovering Menu - Controls functions over hovering. */
+
+.main-navigation.toggled {
+    position: fixed; /* This will keep the mobile menu in a fixed position in the viewport, blocking out the content on the page. */
+    bottom: 0;
+    padding: 1em;
+    z-index: 1; /* THis will suspend the menu on top of the rest of a page's content. */   
+}
+
+.nav-menu {
+    /* padding: 1em; */
+    margin-bottom: 3em;
+    background-color: #ca6;
+    border-radius: 3%;
+}
+
+.main-navigation.toggled ul {
+    max-height: calc(100vh - 8em); /* Sets heigh to 100% of viewport high, minus 8em. */
+    overflow-y: auto;
+}
+
+.main-navigation.toggled ul ul {
+    display: none; /* This will keep the menu from displaying when it shoudld. */
+}
+
+/* In order to reach the unordered list within the unordered list within the toggled menu, just use 'ul' twice. Also, the unordered drop down menus are inheriting from the parent menus. */
+.main-navigation.toggled ul ul.toggled-on,
+.main-navigation.toggled ul ul.toggled-on > ul {
+    display: block; /* Will be set to block when we want the sub items to appear. */
+}
+
+
+
+/* Tablet Menus */
+
+@media and screen and (max-width: 779px) {
+    .main-navigation ul {
+        text-align: center;
+        padding: 0.2em 0em; 
+        padding-right: 0em;
+    
+    }
+    
+    .main-navigation 
+}
+
+
+/* Horizontal menu on wide screens - Controls styles for wide screens and horiztonal styling. Styling the mobile navigation first allows for simpler, (and less) styles to be added to create horizontal navigation. */
+@media screen and (min-width: 423px) {
+	
+	/* Position the menu in the header */
+	.main-navigation,
+	.main-navigation.toggled {
+		position: relative;
+		height: 2.5em;
+		/* max-width: 58em; */
+		margin: 0 auto;
+		padding: 0 3.5em;
+        /* padding-right: 10em; */
+		background: #ccc6bb; /* Old browsers */
+        background: #ccc6bb; /* Old browsers */
+        background: -moz-linear-gradient(top, #ccc6bb 0%, #ccaa66 30%, #ccaa66 80%, #cc9f57 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #ccc6bb 0%,#ccaa66 30%,#ccaa66 80%,#cc9f57 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #ccc6bb 0%,#ccaa66 30%,#ccaa66 80%,#cc9f57 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccc6bb', endColorstr='#cc9f57',GradientType=0 ); /* IE6-9 */
+
+		/* background-color: hsla(0, 0%, 0%, .7); */
+        /* margin-top: 6em; */
+	}
+	
+	.nav-menu {
+		padding: .3em 0 0 0;
+		background-color: transparent;
+	}
+	
+	.main-navigation ul,
+	.main-navigation.toggled ul {
+		max-height: none;
+		padding-left: 0;
+		text-align: center;
+        /* padding-right: 8em; */
+        font-family: dosis;
+        text-transform: uppercase;
+
+	}
+	
+	.main-navigation.toggled ul {
+		overflow-y: visible;
+	}
+	
+	/* Display the menu items in a horizontal order */
+	.main-navigation li {
+		display: inline-block;
+		border: none;
+	}
+    
+	/* Add an outline to the drop-down menus */
+	.main-navigation ul ul {
+		outline: 1px solid #333;
+	}
+	
+	/* Left-align drop-down menu items */
+	.main-navigation li li {
+		display: block;
+		text-align: left;
+	}
+    
+    .main-navigation a {
+        padding: .2em 0em;
+    }
+	
+	.main-navigation a,
+	.main-navigation ul ul li:last-child a {
+		border-bottom: none;
+	}
+	
+	/* Add an outline on hovered and focused menu items */
+	.main-navigation a:hover,
+	.main-navigation a:focus {
+		background: transparent;
+		color: #fff;
+		text-decoration: underline;
+		outline: solid 1px #b3b3b3;
+	}
+	
+	/* Create hover and focus contrast on drop-down items */
+	.main-navigation li li a:hover,
+	.main-navigation li li a:focus {
+		background: #eee;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	
+    
+    /* Hover for main dropdown menus */
+    
+    ul li:hover .children {
+        display:block;
+        position: absolute;
+        background-color: #000;  
+        margin-left: 0;
+        z-index: 100;
+    } 
+    
+    
+    
+    /* Position drop-down menus absolutely */
+	.main-navigation ul ul.toggled-on {
+		position: absolute;
+		width: 12em;
+		display: block;
+		z-index: 10;
+		margin-left: 0;
+		background: #000;
+	}
+    
+    
+	
+	.main-navigation ul ul ul.toggled-on {
+		position: relative;
+	}
+	
+	/* Indent 3rd level drop-down menus */
+	.main-navigation ul ul ul a {
+		padding-left: 2em;
+	}
+	
+	/* Simplify the drop-down toggle */
+	.dropdown-toggle {
+		top: 11px;
+		right: 12px;
+		border: none;
+	}
+	
+	.dropdown-toggle::after {
+		line-height: 27px;
+		width: 27px;
+	}
+    	
+}
+
+
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+img.site-icon {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+    border-radius: 50%;
+    box-shadow: 0 0 0 12px background: #ccc6bb; /* Old browsers */
+        background: -moz-linear-gradient(top, #ccc6bb 0%, #ccaa66 30%, #ccaa66 80%, #cc9f57 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #ccc6bb 0%,#ccaa66 30%,#ccaa66 80%,#cc9f57 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #ccc6bb 0%,#ccaa66 30%,#ccaa66 80%,#cc9f57 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccc6bb', endColorstr='#cc9f57',GradientType=0 ); /* IE6-9 */;
+    box-shadow: 0 0 0 2px #ca6;
+}
+
+.site-logo {
+    position: relative;
+    z-index: 1;
+    bottom: .7em;
+}
+
+.site-logo a {
+    position: relative; 
+    z-index: 1; /* will display on top of anything else. */
+    top: 1.5em;
+    /* left: 3em; */
+    display: block;
+    width: 5em; 
+    height: 5em;
+    background: #ca6;
+    /* border: 2px solid black; */
+    color: white;
+    text-decoration: none;
+    border-radius: 46em;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.site-logo a:hover,
+.site-logo a:focus {
+    outline: 2px solid white;
+}
+
+.site-firstletter {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5 em;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2em;
+    
+}
+
+site-logo a:hover .site-firstletter,
+.site-logo a:focus .site-firstletter {
+    background: white;
+    color: black;
+}
+
+.brandcontainer {
+    position: relative;
+}
+
+/* .brand-text {
+    display: inline-block;
+    padding-left: 8em;
+} */
+
+.site-header {
+    background: gray url(assets/darkgraygrain.png) bottom center;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* The following styles affect the text within the header. */ #site-title a, .site-title /* .site-title */ {
+    /* margin: 2em .4em 0 .4em; */
+    font-family: 'Cormorant', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    line-height: 1.1em;
+    color: white;
+    text-transform: uppercase;
+    word-break: break-word;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0em;
+    margin-top: 1.8em;
+}
+
+/* To prevent a title that is broken up to fit within a smaller screen, this media query will change the size the of text so that it fits within the device screen AND margins. */
+/* @media screen and (max-width: 422px) {
+    .site-title {
+        font-size: 1em;
+    }
+    .site-description {
+        /* font-size: .6em; */
+    } */
+}
+
+#site-title a {
+    text-decoration: none; /* Takes away underlining. */
+    color: inherit; /* The title text will inherit the anchor's attribute. */
+}
+    
+/* The following style will add an underline when hover over or selected with a tab key. */
+.site-title a:hover,
+.site-title a:focus {
+    text-decoration: underline;
+}
+
+.site-description {
+    font-family: 'Cormorant', sans-serif;
+    letter-spacing: 1.5px;
+    margin: 0em .8em 0em .8em;
+    font-size: .75em;
+    /* font-size: 110%; */
+    text-decoration: none;
+    color: #ca6;
+    text-align: center;
+}
+
+/* Decoration */
+.jumbotron {
+    width:100%;
+    height:40px;
+    background: gray url(assets/darkgraygrain.png) bottom center;
+    background-blend-mode: darken;  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.goldstripe {
+    width:100%;
+    height: 20px;
+    background: #ccaa66; /* Old browsers */
+    background: -moz-linear-gradient(top, #ccaa66 57%, #cc8d2e 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ccaa66 57%,#cc8d2e 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ccaa66 57%,#cc8d2e 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccaa66', endColorstr='#cc8d2e',GradientType=0 ); /* IE6-9 */
+    margin: 0;
+}
+
+@media screen and (max-width: 422px) {
+    .jumbotron {
+        display: none;
+    }
+}
+
+/*--------------------------------------------------------------
+# Front Page
+--------------------------------------------------------------*/
+.frontpagecontainer {
+    background-image: url(assets/matteblack.png);
+}
+
+
+/*--------------------------------------------------------------
+# Front Page
+--------------------------------------------------------------*/
+.pagecontainer {
+    
+}
+
+/* Cyclone Slider */
+@media screen and (max-width: 422px) {
+.cycloneslider-slides, .cycloneslider-slide, .cycloneslider-    pager, .info1, .cycloneslider-pager, .cycle-pager-active, .cycloneslider-template-standard, .cyclone-slide-active, .cycloneslider-slide-custom, .cycle-slidshow, #cycle-slider-widget-2, #content {
+        z-index: -800;
+    }
+    #secondary {
+        z-index: 0;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Differentiated Settings
+--------------------------------------------------------------*/
+
+/* TABLET Stylings */
+@media screen and (min-width: 423px) {
+    
+    .site-title {
+        font-size: 1.8em;
+        margin: 1em auto 0em;
+        max-width: 780px;
+        align-items: center;
+    }
+    .site-description {
+        margin: 0em auto 1em;
+    }
+
+}
+
+@media screen and (min-width: 423px)and  (max-width: 779px) {
+    .jumbotron {
+        display: none;
+    }
+    .goldstripe {
+        display: none;
+    }
+}
+
+/* DESKTOP Stylings */
+@media screen and (min-width: 780px) {
+    .site-header {
+        min-height: 6em; 
+        max-height: 9em;
+    }
+    #site-title a, .site-title {
+        font-size: 1.4em;
+        margin: .05em 0em 0em 75px;
+        text-align: left;
+        height: .3em;
+        line-height: .001em;
+        text-decoration: none;
+
+    }
+    .site-description {
+        margin: 0em 0em 0em 150px;
+        text-align: left;
+        line-height: 1.8em;
+        font-size: .8em;
+    }
+    .brandcontainer {
+        clear: none;
+    }
+    .site-logo a {
+        float: left;
+        top: 1.3em;
+        left: 2em; 
+    }
+    .desktopcontainer {
+        width: 100%;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/* ------------------------------------------------------------
+Global
+---------------------------------------------------------- */
+    .site-main {
+    margin: 1.4em;
+    font-size; .8em;
+    line-height: 1.6em;
+}
+
+/* The following media query will dynamically increase the margin as width increases. */
+@media screen and (min-width: 30em) {
+    .site-main {
+        margin: 1.8em;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    .site-main {
+        font-size: 1em;
+    }
+}
+
+/* The following media query will adjust the max width of the content, and also keep the margins even with each other. */
+@media screen and (min-width: 57em) {
+    .site-main {
+        max-width: 45em;
+        margin: 1.8em auto;
+    }
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
