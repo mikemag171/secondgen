@@ -12,13 +12,20 @@
  * @package secondgen
  */
 
-get_header(); 
+get_header(); ?>
+
+<div class="mattespace">
+        
+        </div> 
+<?php
 get_sidebar();
 ?>
 
 <div class="frontpagecontainer">
 
 	<div id="primary" class="content-area">
+        
+        
 		<main id="main" class="site-main" role="main">
 
 			<?php

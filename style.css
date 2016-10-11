@@ -526,11 +526,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #ca6;
 }
 
 a:visited {
-	color: purple;
+	color: darkgoldenrod;
 }
 
 a:hover,
@@ -557,9 +557,14 @@ a:active {
 	width: 100%;
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 300;
-	font-size: 1em;
-    margin-bottom: .6em;
-    opacity: .9;
+	font-size: 1.2em;
+    margin-bottom: 2em;
+    opacity: .975;
+    position: relative;
+    z-index: 10000000;
+    
+    
+    
 }
 
 .main-navigation ul {
@@ -684,7 +689,6 @@ a:active {
 
 .menu-toggle { /* This code styles the mobile menu button and locates it in a fixed position at the bottom left side of the screen. */
     position: fixed;
-    z-index: 100;
     bottom: 1em;
     left: 1em;
     font-size: 1em;
@@ -692,8 +696,10 @@ a:active {
     background-color: #000;
     color: #ca6;
     border: solid 2px #ca6;
+    -webkit-transition: all ease-out 400ms;
+    -moz-transition: all ease-out 400ms;
     transition: all ease-out 400ms; /* This will fade out out over 400 ms the menu botton during a down-scroll. */
-    z-index: 200;
+    z-index: 999999;
     height: 2em;
     width: 3.5em;
     padding: 0em 0em;
@@ -705,7 +711,7 @@ a:active {
 
 /* This following style will make sure the mobile menu button doesn't hide while the menu is toggled open. This will override the .menu-toggle.hide which hides the menu button when scrolling down. */
 .toggled .menu-toggled.hide {
-    bottom: 1em;
+    bottom: 1em; 
 }
 
 @media screen and (min-width: 423px) {
@@ -723,7 +729,7 @@ a:active {
     position: fixed; /* This will keep the mobile menu in a fixed position in the viewport, blocking out the content on the page. */
     bottom: 0;
     padding: 1em;
-    z-index: 1; /* THis will suspend the menu on top of the rest of a page's content. */   
+    z-index: 99900; /* THis will suspend the menu on top of the rest of a page's content. */   
 }
 
 .nav-menu {
@@ -774,7 +780,7 @@ a:active {
 		height: 2.5em;
 		/* max-width: 58em; */
 		margin: 0 auto;
-		padding: 0 3.5em;
+		/* padding: 0 3.5em; */
         /* padding-right: 10em; */
 		background: #ccc6bb; /* Old browsers */
         background: #ccc6bb; /* Old browsers */
@@ -831,6 +837,7 @@ a:active {
 	.main-navigation a,
 	.main-navigation ul ul li:last-child a {
 		border-bottom: none;
+        padding: 0em .5em;
 	}
 	
 	/* Add an outline on hovered and focused menu items */
@@ -975,7 +982,7 @@ a:active {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100; /* Above WP toolbar. */
 }
 
 /* Do not show the outline on the skip link target. */
@@ -1059,7 +1066,7 @@ img.site-icon {
 .site-logo a {
     position: relative; 
     z-index: 1; /* will display on top of anything else. */
-    top: 1.5em;
+    top: 2em;
     /* left: 3em; */
     display: block;
     width: 5em; 
@@ -1112,10 +1119,15 @@ site-logo a:hover .site-firstletter,
     background-size: cover;
 }
 
+.site-branding {
+    height: 6.5;
+    line-height: 1em;
+}
+
 /* The following styles affect the text within the header. */ #site-title a, .site-title /* .site-title */ {
     /* margin: 2em .4em 0 .4em; */
     font-family: 'Cormorant', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: bold;
     letter-spacing: 4px;
     line-height: 1.1em;
@@ -1125,7 +1137,7 @@ site-logo a:hover .site-firstletter,
     text-align: center;
     text-decoration: none;
     margin-bottom: 0em;
-    margin-top: 1.8em;
+    margin-top: 2em;
 }
 
 /* To prevent a title that is broken up to fit within a smaller screen, this media query will change the size the of text so that it fits within the device screen AND margins. */
@@ -1151,9 +1163,9 @@ site-logo a:hover .site-firstletter,
 
 .site-description {
     font-family: 'Cormorant', sans-serif;
-    letter-spacing: 1.5px;
-    margin: 0em .8em 0em .8em;
-    font-size: .75em;
+    letter-spacing: 1.2px;
+    margin: 0em 2.2em -1em 2.2em;
+    font-size: 1em;
     /* font-size: 110%; */
     text-decoration: none;
     color: #ca6;
@@ -1196,11 +1208,17 @@ site-logo a:hover .site-firstletter,
     background-image: url(assets/matteblack.png);
 }
 
+.mattespace {
+    background-image: url(assets/matteblack.png);
+    height: 10em;
+}
+
 
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
 .pagecontainer {
+    align-items: center;
     
 }
 
@@ -1212,6 +1230,29 @@ site-logo a:hover .site-firstletter,
     #secondary {
         z-index: 0;
     }
+}
+    #jpcfrontpage {
+        background-image: url(assets/matteblack.png);
+    }
+#cycloneslider-jpcfrontpage-1 {
+    align-items: center;
+}
+
+.cycloneslider {
+    margin: 0 auto;
+    height: 20em;
+}
+.cycloneslider-slide cycloneslider-slide-custom cycle-slide, .cycleslider-active {
+    height: 20em;
+}
+
+.widget widget_cyclone-slider-widget, #cyclone-slider-widget-2 {
+    background-image: url(assets/matteblack.png);
+}
+
+.cyclonslider-slides {
+    border-radius: 45%;
+    
 }
 
 
@@ -1251,7 +1292,7 @@ site-logo a:hover .site-firstletter,
     }
     #site-title a, .site-title {
         font-size: 1.4em;
-        margin: .05em 0em 0em 75px;
+        margin: .05em 0em 0em 65px;
         text-align: left;
         height: .3em;
         line-height: .001em;
@@ -1259,21 +1300,26 @@ site-logo a:hover .site-firstletter,
 
     }
     .site-description {
-        margin: 0em 0em 0em 150px;
+        margin: 0em 0em 1em 130px;
         text-align: left;
-        line-height: 1.8em;
-        font-size: .8em;
+        line-height: .4em;
+        font-size: 1em;
     }
     .brandcontainer {
         clear: none;
     }
     .site-logo a {
         float: left;
-        top: 1.3em;
+        top: 3em;
         left: 2em; 
     }
     .desktopcontainer {
         width: 100%;
+    }
+    
+    .main-navigation ul {
+        text-align: right;
+        padding-right: 8em;
     }
 }
 
@@ -1290,15 +1336,76 @@ site-logo a:hover .site-firstletter,
 	max-width: 100%;
 }
 
+
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.entry-title {
+    text-align: center;
+    color: darkgray;
+    display: none;
+    font-family: Cormorant, sans-serif;
+    font-size: 2em;
+}
+
+.site-content {
+    background-image: url(assets/matteblack.png);
+}
+
+.content-background  {
+    border-radius: 2%;
+    background: gray url(assets/darkgraygrain.png) bottom center;
+    background-blend-mode: lighten;
+}
+
+p .wpcf7-form-control.wpcf7-submit {
+    background: #ca6;
+    box-shadow: none;
+    font-size: 1em;
+    font-stretch: extra-expanded;
+    border: 2px solid white;
+}
+
+p .wpcf7-form-control.wpcf7-submit:hover {
+    border: 2px solid slategray;
+}
+/* Contact Form */
+.wpcf7 { /* Gray text on contact form. */
+    color: gray;
+}
+.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    background-color: gray;
+}
+
+.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-number, .wpcf7-form-control.wpcf7-text, .wpcf7-form-control.wpcf7-textarea {
+    background-color: gray;
+    z-index: 0;
+}
+
+#wpcf7-f65-p66-o1 {
+    margin: 0em 0em 0em 0em;
+}
+
+#dslc-theme-content {
+    margin: 0em 0em;
+    z-index: 0;
+}
+
+#contact {
+    z-index: 0;
+}
+
+.wpcf7-form p:nth-child(7) {
+    text-align: center;
+}
+
 
 /* ------------------------------------------------------------
 Global
 ---------------------------------------------------------- */
     .site-main {
-    margin: 1.4em;
+    margin: .4em; 
     font-size; .8em;
     line-height: 1.6em;
 }
@@ -1379,6 +1486,17 @@ Global
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+    text-align: right;
+    color: dimgray;
+    background-image: url(assets/matteblack.png);
+    font-size: .5em;
 }
 
 /*--------------------------------------------------------------

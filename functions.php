@@ -109,6 +109,10 @@ function secondgen_scripts() {
     wp_enqueue_style( 'firstgen-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
     
     wp_enqueue_script( 'secondgen-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_localize_script( 'secondgen-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'secondgen' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'secondgen' ) . '</span>',
+	) );
 
 	wp_enqueue_script( 'secondgen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
